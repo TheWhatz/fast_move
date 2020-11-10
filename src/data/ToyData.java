@@ -15,8 +15,9 @@ public class ToyData {
 
     public static Person[] getPerson() {
         Person[] person = new Person[3];
-        // your code
-
+        for (int i = 0; i < person.length; i++) {
+            person[i] = new Person(null, null);
+        }
         return person;
     }
 
@@ -29,9 +30,9 @@ public class ToyData {
 
     //testing
     public static void main(String[] args) {
-        printBike();
+        // printBike();
         printPerson();
-        printParcels();
+        // printParcels();
     }
 
     private static void printBike() {
