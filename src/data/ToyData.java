@@ -3,6 +3,7 @@ package data;
 import base.Bike;
 import base.Parcel;
 import base.Person;
+import base.ParcelStatus;
 
 public class ToyData {
 
@@ -25,16 +26,26 @@ public class ToyData {
 
     public static Parcel[] getParcels() {
         Parcel[] parcels = new Parcel[10];
-        // your code
-
+        
+        parcels[0] = new Parcel(10, ParcelStatus.SHIPPING);
+        parcels[1] = new Parcel(20, ParcelStatus.READY_TO_SHIP);
+        parcels[2] = new Parcel(30, ParcelStatus.DELIVERED);
+        parcels[3] = new Parcel(40, ParcelStatus.SHIPPING);
+        parcels[4] = new Parcel(10, ParcelStatus.READY_TO_SHIP);
+        parcels[5] = new Parcel(20, ParcelStatus.DELIVERED);
+        parcels[6] = new Parcel(30, ParcelStatus.SHIPPING);
+        parcels[7] = new Parcel(40, ParcelStatus.READY_TO_SHIP);
+        parcels[8] = new Parcel(10, ParcelStatus.DELIVERED);
+        parcels[9] = new Parcel(20, ParcelStatus.SHIPPING);
+        
         return parcels;
     }
 
     //testing
     public static void main(String[] args) {
         // printBike();
-        printPerson();
-        // printParcels();
+        // printPerson();
+        printParcels();
     }
 
     private static void printBike() {
